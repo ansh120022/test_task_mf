@@ -12,7 +12,9 @@ logger = logging.getLogger("test sql executor")
 
 class Browser:
     def __init__(self):
-        self.driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver")
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--headless")
+        self.driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver", chrome_options=chrome_options)
         logging.info("Running Chrome")
 
     def open_test_page(self, url):
