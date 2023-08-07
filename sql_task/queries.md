@@ -36,3 +36,21 @@ SELECT CASE
            ELSE 'failed'
        END AS test_add_customer;
 ``` 
+
+### test 4
+``` sql
+INSERT INTO Customers (CustomerName, City, Country)
+VALUES ('Test Customer', 'Test city', 'Test country');
+
+SELECT CASE
+           WHEN
+                  (SELECT count(*)
+                   FROM Customers
+                   WHERE CustomerName='Test Customer'
+                     AND city='Test city'
+                     AND country='Test country') > 0 THEN 'passed'
+           ELSE 'failed'
+       END AS test_add_customer;
+``` 
+
+
