@@ -7,4 +7,4 @@ Given that [Docker](https://www.docker.com/get-started/) installed, perform the 
     1. docker build --tag tests . --no-cache
     2. docker run -it tests python3 -m pytest
 
-The log expected to contain test's status (2 PASSED results)
+The log expected to contain test's status (4 PASSED results)
