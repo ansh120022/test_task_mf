@@ -1,3 +1,5 @@
+This is the test task from Mayflower (or WiseBits)
+
 # Quick start
 
 Given that [Docker](https://www.docker.com/get-started/) installed, perform the following commands:
